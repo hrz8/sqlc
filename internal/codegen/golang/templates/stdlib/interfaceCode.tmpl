@@ -6,19 +6,31 @@
             {{range .Comments}}//{{.}}
             {{end -}}
             {{.MethodName}}(ctx context.Context, db DBTX, {{.Arg.Pair}}) ({{.Ret.DefineType}}, error)
+            {{- if $.EmitWithExtraQuery }}
+            {{.MethodName}}ExtraQ(ctx context.Context, db DBTX, {{.Arg.Pair}} {{- if ne .Arg.Pair ""}}, {{end -}} extra ...string) ({{.Ret.DefineType}}, error)
+            {{- end -}}
         {{- else if eq .Cmd ":one"}}
             {{range .Comments}}//{{.}}
             {{end -}}
             {{.MethodName}}(ctx context.Context, {{.Arg.Pair}}) ({{.Ret.DefineType}}, error)
+            {{- if $.EmitWithExtraQuery }}
+            {{.MethodName}}ExtraQ(ctx context.Context, {{.Arg.Pair}} {{- if ne .Arg.Pair ""}}, {{end -}} extra ...string) ({{.Ret.DefineType}}, error)
+            {{- end -}}
         {{- end}}
         {{- if and (eq .Cmd ":many") ($dbtxParam) }}
             {{range .Comments}}//{{.}}
             {{end -}}
             {{.MethodName}}(ctx context.Context, db DBTX, {{.Arg.Pair}}) ([]{{.Ret.DefineType}}, error)
+            {{- if $.EmitWithExtraQuery }}
+            {{.MethodName}}ExtraQ(ctx context.Context, db DBTX, {{.Arg.Pair}} {{- if ne .Arg.Pair ""}}, {{end -}} extra ...string) ([]{{.Ret.DefineType}}, error)
+            {{- end -}}
         {{- else if eq .Cmd ":many"}}
             {{range .Comments}}//{{.}}
             {{end -}}
             {{.MethodName}}(ctx context.Context, {{.Arg.Pair}}) ([]{{.Ret.DefineType}}, error)
+            {{- if $.EmitWithExtraQuery }}
+            {{.MethodName}}ExtraQ(ctx context.Context, {{.Arg.Pair}} {{- if ne .Arg.Pair ""}}, {{end -}} extra ...string) ([]{{.Ret.DefineType}}, error)
+            {{- end -}}
         {{- end}}
         {{- if and (eq .Cmd ":exec") ($dbtxParam) }}
             {{range .Comments}}//{{.}}
