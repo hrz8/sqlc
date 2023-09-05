@@ -233,6 +233,13 @@ func buildImports(settings *plugin.Settings, queries []Query, uses func(string) 
 
 func (i *importer) interfaceImports() fileImports {
 	std, pkg := buildImports(i.Settings, i.Queries, func(name string) bool {
+		isThereExecResult := false
+		for _, q := range i.Queries {
+			if q.Cmd == metadata.CmdExecResult {
+				isThereExecResult = true
+			}
+		}
+
 		for _, q := range i.Queries {
 			if q.hasRetType() {
 				if usesBatch([]Query{q}) {
@@ -244,7 +251,7 @@ func (i *importer) interfaceImports() fileImports {
 			}
 			if !q.Arg.isEmpty() {
 				for _, f := range q.Arg.Fields() {
-					if hasPrefixIgnoringSliceAndPointerPrefix(f.Type, name) {
+					if hasPrefixIgnoringSliceAndPointerPrefix(f.Type, name) && isThereExecResult {
 						return true
 					}
 				}
