@@ -10,7 +10,7 @@ import (
 	"net/http/httputil"
 	"os"
 
-	"github.com/sqlc-dev/sqlc/internal/config"
+	"github.com/hrz8/sqlc/internal/config"
 )
 
 type Uploader struct {

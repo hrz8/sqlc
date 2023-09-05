@@ -12,9 +12,9 @@ import (
 	nodes "github.com/pganalyze/pg_query_go/v4"
 	"github.com/pganalyze/pg_query_go/v4/parser"
 
-	"github.com/sqlc-dev/sqlc/internal/metadata"
-	"github.com/sqlc-dev/sqlc/internal/sql/ast"
-	"github.com/sqlc-dev/sqlc/internal/sql/sqlerr"
+	"github.com/hrz8/sqlc/internal/metadata"
+	"github.com/hrz8/sqlc/internal/sql/ast"
+	"github.com/hrz8/sqlc/internal/sql/sqlerr"
 )
 
 func stringSlice(list *nodes.List) []string {

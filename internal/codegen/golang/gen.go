@@ -10,9 +10,9 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/sqlc-dev/sqlc/internal/codegen/sdk"
-	"github.com/sqlc-dev/sqlc/internal/metadata"
-	"github.com/sqlc-dev/sqlc/internal/plugin"
+	"github.com/hrz8/sqlc/internal/codegen/sdk"
+	"github.com/hrz8/sqlc/internal/metadata"
+	"github.com/hrz8/sqlc/internal/plugin"
 )
 
 type tmplCtx struct {

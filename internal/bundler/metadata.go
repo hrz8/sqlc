@@ -3,7 +3,7 @@ package bundler
 import (
 	"runtime"
 
-	"github.com/sqlc-dev/sqlc/internal/info"
+	"github.com/hrz8/sqlc/internal/info"
 )
 
 func projectMetadata() ([][2]string, error) {

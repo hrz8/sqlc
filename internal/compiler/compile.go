@@ -8,13 +8,13 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/sqlc-dev/sqlc/internal/metadata"
-	"github.com/sqlc-dev/sqlc/internal/migrations"
-	"github.com/sqlc-dev/sqlc/internal/multierr"
-	"github.com/sqlc-dev/sqlc/internal/opts"
-	"github.com/sqlc-dev/sqlc/internal/sql/ast"
-	"github.com/sqlc-dev/sqlc/internal/sql/sqlerr"
-	"github.com/sqlc-dev/sqlc/internal/sql/sqlpath"
+	"github.com/hrz8/sqlc/internal/metadata"
+	"github.com/hrz8/sqlc/internal/migrations"
+	"github.com/hrz8/sqlc/internal/multierr"
+	"github.com/hrz8/sqlc/internal/opts"
+	"github.com/hrz8/sqlc/internal/sql/ast"
+	"github.com/hrz8/sqlc/internal/sql/sqlerr"
+	"github.com/hrz8/sqlc/internal/sql/sqlpath"
 )
 
 // TODO: Rename this interface Engine

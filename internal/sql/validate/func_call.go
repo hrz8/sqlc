@@ -4,11 +4,11 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/sqlc-dev/sqlc/internal/config"
-	"github.com/sqlc-dev/sqlc/internal/sql/ast"
-	"github.com/sqlc-dev/sqlc/internal/sql/astutils"
-	"github.com/sqlc-dev/sqlc/internal/sql/catalog"
-	"github.com/sqlc-dev/sqlc/internal/sql/sqlerr"
+	"github.com/hrz8/sqlc/internal/config"
+	"github.com/hrz8/sqlc/internal/sql/ast"
+	"github.com/hrz8/sqlc/internal/sql/astutils"
+	"github.com/hrz8/sqlc/internal/sql/catalog"
+	"github.com/hrz8/sqlc/internal/sql/sqlerr"
 )
 
 type funcCallVisitor struct {

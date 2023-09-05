@@ -3,12 +3,12 @@ package compiler
 import (
 	"fmt"
 
-	"github.com/sqlc-dev/sqlc/internal/config"
-	"github.com/sqlc-dev/sqlc/internal/engine/dolphin"
-	"github.com/sqlc-dev/sqlc/internal/engine/postgresql"
-	"github.com/sqlc-dev/sqlc/internal/engine/sqlite"
-	"github.com/sqlc-dev/sqlc/internal/opts"
-	"github.com/sqlc-dev/sqlc/internal/sql/catalog"
+	"github.com/hrz8/sqlc/internal/config"
+	"github.com/hrz8/sqlc/internal/engine/dolphin"
+	"github.com/hrz8/sqlc/internal/engine/postgresql"
+	"github.com/hrz8/sqlc/internal/engine/sqlite"
+	"github.com/hrz8/sqlc/internal/opts"
+	"github.com/hrz8/sqlc/internal/sql/catalog"
 )
 
 type Compiler struct {

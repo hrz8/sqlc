@@ -10,8 +10,8 @@ import (
 	driver "github.com/pingcap/tidb/parser/test_driver"
 	"github.com/pingcap/tidb/parser/types"
 
-	"github.com/sqlc-dev/sqlc/internal/debug"
-	"github.com/sqlc-dev/sqlc/internal/sql/ast"
+	"github.com/hrz8/sqlc/internal/debug"
+	"github.com/hrz8/sqlc/internal/sql/ast"
 )
 
 type cc struct {

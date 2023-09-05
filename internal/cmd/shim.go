@@ -3,12 +3,12 @@ package cmd
 import (
 	"strings"
 
-	"github.com/sqlc-dev/sqlc/internal/compiler"
-	"github.com/sqlc-dev/sqlc/internal/config"
-	"github.com/sqlc-dev/sqlc/internal/config/convert"
-	"github.com/sqlc-dev/sqlc/internal/info"
-	"github.com/sqlc-dev/sqlc/internal/plugin"
-	"github.com/sqlc-dev/sqlc/internal/sql/catalog"
+	"github.com/hrz8/sqlc/internal/compiler"
+	"github.com/hrz8/sqlc/internal/config"
+	"github.com/hrz8/sqlc/internal/config/convert"
+	"github.com/hrz8/sqlc/internal/info"
+	"github.com/hrz8/sqlc/internal/plugin"
+	"github.com/hrz8/sqlc/internal/sql/catalog"
 )
 
 func pluginOverride(r *compiler.Result, o config.Override) *plugin.Override {

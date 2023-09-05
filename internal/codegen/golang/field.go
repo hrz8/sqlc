@@ -6,7 +6,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/sqlc-dev/sqlc/internal/plugin"
+	"github.com/hrz8/sqlc/internal/plugin"
 )
 
 type Field struct {
